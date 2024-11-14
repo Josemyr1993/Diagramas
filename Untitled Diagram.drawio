@@ -88,8 +88,8 @@
             <mxPoint x="-530" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dOZr36EuYsMOl_1ssyyu-48" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#808080;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="-230" y="347" width="182" height="110" as="geometry" />
+        <mxCell id="dOZr36EuYsMOl_1ssyyu-48" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#808080;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="347" width="182" height="123" as="geometry" />
         </mxCell>
         <mxCell id="dOZr36EuYsMOl_1ssyyu-46" value="WebApp-pod" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
           <mxGeometry x="-214" y="387.85" width="50" height="48" as="geometry" />
@@ -132,6 +132,9 @@
             <mxPoint x="-408.43" y="265" as="sourcePoint" />
             <mxPoint x="-408.43" y="341" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="dOZr36EuYsMOl_1ssyyu-64" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="-328.77" y="396" width="38.54" height="37" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
