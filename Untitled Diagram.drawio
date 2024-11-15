@@ -232,9 +232,6 @@
         <mxCell id="dOZr36EuYsMOl_1ssyyu-106" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="-64" y="-313.8" width="50" height="159.6" as="geometry" />
         </mxCell>
-        <mxCell id="dOZr36EuYsMOl_1ssyyu-107" value="" style="fontStyle=0;verticalAlign=top;align=center;spacingTop=-2;fillColor=none;rounded=1;whiteSpace=wrap;html=1;strokeColor=#4376BB;strokeWidth=1;dashed=0;container=1;collapsible=0;expand=0;recursiveResize=0;arcSize=2;" vertex="1" parent="1">
-          <mxGeometry x="-996" y="-363" width="1568" height="1006" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
