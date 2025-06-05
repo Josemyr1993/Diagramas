@@ -55,19 +55,19 @@
         <mxCell id="baAxldsewOCLqtphPSqi-18" value="&lt;b&gt;Podman - TomCat&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#CCCCCC;" vertex="1" parent="1">
           <mxGeometry x="850" y="160.25" width="109" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-7" target="baAxldsewOCLqtphPSqi-15">
+        <mxCell id="baAxldsewOCLqtphPSqi-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#5D78A3;strokeColor=#666666;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-7" target="baAxldsewOCLqtphPSqi-15">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="510" y="369" as="sourcePoint" />
             <mxPoint x="560" y="319" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-8" target="baAxldsewOCLqtphPSqi-16">
+        <mxCell id="baAxldsewOCLqtphPSqi-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-8" target="baAxldsewOCLqtphPSqi-16">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="530" y="420" as="sourcePoint" />
             <mxPoint x="718" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-21" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-9" target="baAxldsewOCLqtphPSqi-17">
+        <mxCell id="baAxldsewOCLqtphPSqi-21" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1" source="baAxldsewOCLqtphPSqi-9" target="baAxldsewOCLqtphPSqi-17">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="530" y="502" as="sourcePoint" />
             <mxPoint x="718" y="502" as="targetPoint" />
