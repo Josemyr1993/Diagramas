@@ -22,13 +22,13 @@
         <mxCell id="baAxldsewOCLqtphPSqi-6" value="&lt;div&gt;&lt;span style=&quot;color: rgb(153, 153, 153);&quot; data-teams=&quot;true&quot;&gt;&lt;b&gt;SVBESNIFRP01&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot; data-teams=&quot;true&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#CCCCCC;" vertex="1" parent="1">
           <mxGeometry x="394" y="156" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-7" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.test.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="baAxldsewOCLqtphPSqi-7" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.test.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="362.75" y="310" width="167.5" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-8" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.qual.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="baAxldsewOCLqtphPSqi-8" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.qual.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;strokeColor=none;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="362.75" y="392" width="167.5" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="baAxldsewOCLqtphPSqi-9" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="baAxldsewOCLqtphPSqi-9" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ring.app.bancobai.ao&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="362.75" y="474" width="167.5" height="57" as="geometry" />
         </mxCell>
         <mxCell id="baAxldsewOCLqtphPSqi-11" value="&lt;div align=&quot;left&quot;&gt;Windows Server que&amp;nbsp; faz o processo de autenticação (Windows Autentication) e faz o redirect para o tomcat&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
