@@ -11,22 +11,36 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OXYed8NaaqVvEuWewfNm-1" parent="1" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.ftp_server;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#1A1A1A;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;svmngsftp01a&lt;/font&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="143" width="104.67" x="346" y="483" as="geometry" />
+          <mxGeometry height="143" width="104.67" x="355" y="438" as="geometry" />
         </mxCell>
         <mxCell id="OXYed8NaaqVvEuWewfNm-4" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#D0CEE2;sketch=0;dashed=1;dashPattern=1 4;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#FFFFFF;" value="&lt;b&gt;Path-1&lt;br&gt;&lt;br&gt;/home/vmback/data&lt;/b&gt;" vertex="1">
-          <mxGeometry height="60" width="139.01" x="128" y="346" as="geometry" />
+          <mxGeometry height="60" width="139.01" x="127" y="635" as="geometry" />
         </mxCell>
         <mxCell id="OXYed8NaaqVvEuWewfNm-6" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#D0CEE2;sketch=0;dashed=1;dashPattern=1 4;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#FFFFFF;" value="&lt;div&gt;&lt;b&gt;Path-2&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;/backup/data&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="56" width="110" x="521.01" y="348" as="geometry" />
+          <mxGeometry height="56" width="128.99" x="544" y="637" as="geometry" />
         </mxCell>
         <mxCell id="OXYed8NaaqVvEuWewfNm-9" edge="1" parent="1" source="OXYed8NaaqVvEuWewfNm-4" style="shape=link;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#736CA8;labelBackgroundColor=none;fontColor=default;" target="OXYed8NaaqVvEuWewfNm-6" value="">
           <mxGeometry relative="1" width="100" as="geometry">
-            <mxPoint x="292" y="367" as="sourcePoint" />
-            <mxPoint x="394.99" y="367" as="targetPoint" />
+            <mxPoint x="301" y="322" as="sourcePoint" />
+            <mxPoint x="403.99" y="322" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OXYed8NaaqVvEuWewfNm-10" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#5D7F99;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.vcenter_server;labelBackgroundColor=none;fontColor=#1A1A1A;" value="" vertex="1">
-          <mxGeometry height="104" width="99" x="115" y="145" as="geometry" />
+          <mxGeometry height="104" width="99" x="45" y="89" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-11" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#5D7F99;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.vcenter_server;labelBackgroundColor=none;fontColor=#1A1A1A;" value="" vertex="1">
+          <mxGeometry height="104" width="99" x="210" y="89" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-13" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_controller;fontColor=#1A1A1A;" value="NSX - New" vertex="1">
+          <mxGeometry height="66" width="66" x="699" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-27" edge="1" parent="1" source="OXYed8NaaqVvEuWewfNm-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#736CA8;fontColor=#1A1A1A;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="602" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-14" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_controller;fontColor=#1A1A1A;" value="NSX - Old" vertex="1">
+          <mxGeometry height="66" width="66" x="463" y="106" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
