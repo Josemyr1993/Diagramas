@@ -4,6 +4,30 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="OXYed8NaaqVvEuWewfNm-5" edge="1" parent="1" source="OXYed8NaaqVvEuWewfNm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#736CA8;fontColor=default;" target="OXYed8NaaqVvEuWewfNm-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-7" edge="1" parent="1" source="OXYed8NaaqVvEuWewfNm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#736CA8;fontColor=default;" target="OXYed8NaaqVvEuWewfNm-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-1" parent="1" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.ftp_server;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#1A1A1A;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;svmngsftp01a&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="143" width="104.67" x="346" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-4" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#D0CEE2;sketch=0;dashed=1;dashPattern=1 4;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#FFFFFF;" value="&lt;b&gt;Path-1&lt;br&gt;&lt;br&gt;/home/vmback/data&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="139.01" x="128" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-6" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#D0CEE2;sketch=0;dashed=1;dashPattern=1 4;labelBackgroundColor=none;fillColor=#5D7F99;fontColor=#FFFFFF;" value="&lt;div&gt;&lt;b&gt;Path-2&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;/backup/data&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56" width="110" x="521.01" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-9" edge="1" parent="1" source="OXYed8NaaqVvEuWewfNm-4" style="shape=link;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#736CA8;labelBackgroundColor=none;fontColor=default;" target="OXYed8NaaqVvEuWewfNm-6" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <mxPoint x="292" y="367" as="sourcePoint" />
+            <mxPoint x="394.99" y="367" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OXYed8NaaqVvEuWewfNm-10" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#5D7F99;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.vcenter_server;labelBackgroundColor=none;fontColor=#1A1A1A;" value="" vertex="1">
+          <mxGeometry height="104" width="99" x="115" y="145" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
