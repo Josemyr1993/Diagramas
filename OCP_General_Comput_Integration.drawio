@@ -105,14 +105,14 @@
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-89" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="-512" y="49" as="sourcePoint" />
-            <mxPoint x="1087" y="56" as="targetPoint" />
+            <mxPoint x="-515" y="50" as="sourcePoint" />
+            <mxPoint x="1091" y="56" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-90" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="-508.5" y="-69" as="sourcePoint" />
-            <mxPoint x="1091" y="-56" as="targetPoint" />
+            <mxPoint x="-516" y="-69" as="sourcePoint" />
+            <mxPoint x="1091" y="-62" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-91" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
@@ -138,6 +138,15 @@
             <mxPoint x="-78" y="330" as="sourcePoint" />
             <mxPoint x="-77.63063063063055" y="305" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Private Network - 10.0.0.0/16" vertex="1">
+          <mxGeometry height="30" width="160" x="-263" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Private Network - 10.0.0.0/16" vertex="1">
+          <mxGeometry height="30" width="178" x="-514" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-101" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Public Network - 172.31.62.0 /24" vertex="1">
+          <mxGeometry height="30" width="195" x="-514.5" y="-288" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
