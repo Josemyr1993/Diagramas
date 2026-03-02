@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0" version="29.6.0">
   <diagram name="Page-1" id="RZEmFe03gBY5CuuzgPCr">
-    <mxGraphModel dx="2216" dy="1259" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2466" dy="1411" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -139,14 +139,17 @@
             <mxPoint x="-77.63063063063055" y="305" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lHoAPPVwA29L-KIwwyKC-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Private Network - 10.0.0.0/16" vertex="1">
-          <mxGeometry height="30" width="160" x="-263" y="213" as="geometry" />
-        </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Private Network - 10.0.0.0/16" vertex="1">
           <mxGeometry height="30" width="178" x="-514" y="-100" as="geometry" />
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-101" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Public Network - 172.31.62.0 /24" vertex="1">
           <mxGeometry height="30" width="195" x="-514.5" y="-288" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-102" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Openshift OVN* " vertex="1">
+          <mxGeometry height="30" width="184" x="201.25" y="17" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-103" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Replicas: 10 &lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="82" x="963" y="360" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
