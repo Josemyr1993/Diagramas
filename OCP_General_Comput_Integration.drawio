@@ -142,7 +142,7 @@
         <mxCell id="lHoAPPVwA29L-KIwwyKC-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Private Network - 10.0.0.0/16" vertex="1">
           <mxGeometry height="30" width="178" x="-514" y="-100" as="geometry" />
         </mxCell>
-        <mxCell id="lHoAPPVwA29L-KIwwyKC-101" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Public Network - 172.31.62.0 /24" vertex="1">
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-101" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Public Network - 172.31.62.10 /24" vertex="1">
           <mxGeometry height="30" width="195" x="-514.5" y="-288" as="geometry" />
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-102" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Openshift OVN* " vertex="1">
