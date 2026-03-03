@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0" version="29.6.0">
   <diagram name="Page-1" id="RZEmFe03gBY5CuuzgPCr">
-    <mxGraphModel dx="2866" dy="2611" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4000" dy="3290" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -438,6 +438,18 @@
         </mxCell>
         <mxCell id="lHoAPPVwA29L-KIwwyKC-199" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;port: 6443&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="82" x="1050" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-200" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;dashed=1;flowAnimation=1;entryX=0.024;entryY=0.598;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="41" y="191" as="sourcePoint" />
+            <mxPoint x="39.791999999999916" y="530.0219999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-201" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;dashed=1;flowAnimation=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-47" y="527" as="sourcePoint" />
+            <mxPoint x="44" y="527" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
