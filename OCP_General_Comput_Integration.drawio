@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0" version="29.6.0">
   <diagram name="Page-1" id="RZEmFe03gBY5CuuzgPCr">
-    <mxGraphModel dx="3160" dy="2632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3160" dy="3032" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -256,8 +256,11 @@
         <mxCell id="lHoAPPVwA29L-KIwwyKC-144" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#B3B3B3;dashed=1;" value="" vertex="1">
           <mxGeometry height="1163" width="635" x="1588" y="-1093" as="geometry" />
         </mxCell>
-        <mxCell id="lHoAPPVwA29L-KIwwyKC-145" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;External Integrations&lt;/font&gt;" vertex="1">
-          <mxGeometry height="76" width="291" x="1760" y="-1060" as="geometry" />
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-145" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#36393d;fillColor=#eeeeee;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;External Integrations&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66" width="291" x="1757" y="-1093" as="geometry" />
+        </mxCell>
+        <mxCell id="lHoAPPVwA29L-KIwwyKC-146" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#B3B3B3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="714.25" width="1013" x="190" y="-1422" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
