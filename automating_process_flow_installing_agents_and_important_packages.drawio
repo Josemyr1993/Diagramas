@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="64e8F4NmcQV0RyfO16XD">
-    <mxGraphModel dx="2052" dy="1011" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2406" dy="1227" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -95,10 +95,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="l8U78lP06yOk8_NAmsvG-43" parent="l8U78lP06yOk8_NAmsvG-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Status de ativação / instalação" vertex="1">
-          <mxGeometry height="30" width="174" x="1447" y="263" as="geometry" />
+          <mxGeometry height="30" width="174" x="1483" y="254" as="geometry" />
         </mxCell>
-        <mxCell id="l8U78lP06yOk8_NAmsvG-54" parent="l8U78lP06yOk8_NAmsvG-9" style="ellipse;whiteSpace=wrap;html=1;" value="" vertex="1">
+        <mxCell id="l8U78lP06yOk8_NAmsvG-54" parent="l8U78lP06yOk8_NAmsvG-9" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="" vertex="1">
           <mxGeometry height="35" width="54.5" x="1703" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="l8U78lP06yOk8_NAmsvG-56" parent="l8U78lP06yOk8_NAmsvG-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fim" vertex="1">
+          <mxGeometry height="30" width="94" x="1683.25" y="233" as="geometry" />
         </mxCell>
         <mxCell id="l8U78lP06yOk8_NAmsvG-55" edge="1" parent="1" source="l8U78lP06yOk8_NAmsvG-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="l8U78lP06yOk8_NAmsvG-54" value="">
           <mxGeometry relative="1" as="geometry" />
