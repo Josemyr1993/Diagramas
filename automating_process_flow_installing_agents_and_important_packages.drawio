@@ -124,7 +124,7 @@
           <mxGeometry height="84.5" width="113" x="1338" y="698" as="geometry" />
         </mxCell>
         <mxCell id="AOmDv3N3JYEkQBIjubZ6-2" parent="l8U78lP06yOk8_NAmsvG-9" style="shape=display;whiteSpace=wrap;html=1;" value="Subscrição Ativa" vertex="1">
-          <mxGeometry height="84.5" width="113" x="1338" y="214" as="geometry" />
+          <mxGeometry height="84.5" width="113" x="1338" y="188" as="geometry" />
         </mxCell>
         <mxCell id="AOmDv3N3JYEkQBIjubZ6-3" parent="l8U78lP06yOk8_NAmsvG-9" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b&gt;Pacotes&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Instalado ?&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="108" width="105" x="936" y="394" as="geometry" />
