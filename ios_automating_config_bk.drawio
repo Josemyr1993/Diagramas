@@ -9,7 +9,7 @@
         </mxCell>
         <mxCell id="qd-h_AmD_gsA7I2wZSZ2-48" parent="qd-h_AmD_gsA7I2wZSZ2-47" style="swimlane;startSize=20;horizontal=0;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Azure DevOps&lt;/font&gt;" vertex="1">
           <mxGeometry height="265" width="1351" y="20" as="geometry">
-            <mxRectangle height="26" width="1316" y="20" as="alternateBounds" />
+            <mxRectangle height="26" width="1351" y="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="qd-h_AmD_gsA7I2wZSZ2-69" parent="qd-h_AmD_gsA7I2wZSZ2-48" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" value="Project Cred. read" vertex="1">
