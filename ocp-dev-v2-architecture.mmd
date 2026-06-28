@@ -1,0 +1,138 @@
+---
+title: "OpenShift 4.18 — ocp-dev-v2 | UPI | vSphere 8 | High-Level Architecture"
+---
+
+graph TB
+
+    %% ── EXTERNAL ZONE ──────────────────────────────────────────
+    subgraph EXT["🌐  External Zone"]
+        USERS["👤 Users / Clients"]
+        GIT["📁 Git Repository\nSource of Truth"]
+        AD["🏢 Active Directory\nLDAP Server"]
+        LB["⚖️ Load Balancer\nAPI :6443 | Ingress :80/:443"]
+        DNS["🔌 DNS / NTP\nServers"]
+    end
+
+    %% ── VSPHERE PLATFORM ───────────────────────────────────────
+    subgraph VS["☁️  VMware vSphere 8 — Compute Platform  |  vCenter: [VCENTER_FQDN]  |  Datastore: [DS]"]
+
+        %% ── OCP CLUSTER ────────────────────────────────────────
+        subgraph OCP["🔴  OpenShift Cluster — ocp-dev-v2  |  OCP 4.18  |  UPI"]
+
+            %% Control Plane
+            subgraph CP["Control Plane"]
+                M1["Master 01\n8vCPU | 32GB\netcd · API · Scheduler"]
+                M2["Master 02\n8vCPU | 32GB\netcd · API · Scheduler"]
+                M3["Master 03\n8vCPU | 32GB\netcd · API · Scheduler"]
+            end
+
+            %% Infra Nodes
+            subgraph INFRA["Infrastructure Nodes  —  tainted: infra"]
+                ROUTER["Ingress Router\nHAProxy\nIngress VIP: [IP]"]
+                MON["Monitoring\nPrometheus · Grafana\nAlertmanager · Thanos"]
+                LOG["Logging\nLoki · Vector\nApp · Infra · Audit"]
+                REG["Image Registry\nopenshift-image-registry\nBackend: NooBaa OBC"]
+            end
+
+            %% Worker Nodes
+            subgraph WORKERS["Worker / Compute Nodes"]
+                W1["Worker 01\n[N]vCPU | [N]GB\nApplication Workloads"]
+                W2["Worker 02\n[N]vCPU | [N]GB\nApplication Workloads"]
+                WN["Worker N\n[N]vCPU | [N]GB\nApplication Workloads"]
+            end
+
+            %% Storage Nodes / ODF
+            subgraph ODF["Storage Nodes — ODF Internal Mode  |  openshift-storage"]
+                OSD1["Storage Node 01\nCeph OSD · [N]GB"]
+                OSD2["Storage Node 02\nCeph OSD · [N]GB"]
+                OSD3["Storage Node 03\nCeph OSD · [N]GB"]
+                NOOBAA["NooBaa MCG\nS3 Endpoint · OBC\nBackingStore: Ceph RBD"]
+                SC["StorageClasses\nceph-rbd RWO · cephfs RWX · noobaa OBC"]
+            end
+
+            %% Platform Services
+            subgraph PS["Platform Services"]
+
+                subgraph AUTH["Authentication"]
+                    OAUTH["OAuth2 / OIDC\nIdentity Provider"]
+                    LDAP_IDP["LDAP IdP\nAD Groups → RBAC"]
+                end
+
+                subgraph CERTMGR["Certificate Management"]
+                    CERTOP["cert-manager Operator\nClusterIssuer"]
+                    CERTS["API Cert · Wildcard\nRegistry · Auto-Renew"]
+                end
+
+                subgraph GITOPS["GitOps & CI/CD"]
+                    ARGO["ArgoCD\nApp-of-Apps · Auto Sync"]
+                    TEKTON["Tekton Pipelines\nBuild · Test · Push"]
+                end
+
+                subgraph MESH["Service Mesh — OSSM / Istio"]
+                    SMCP["SMCP · mTLS STRICT\nIngress & Egress GW"]
+                    KIALI["Kiali · Jaeger\nTopology · Tracing"]
+                end
+
+                subgraph NET["Networking"]
+                    OVN["OVN-Kubernetes\nPrimary CNI · NetworkPolicy"]
+                    MULTUS["Multus CNI\nNADs · Multi-NIC · IPAM"]
+                    SRIOV["SR-IOV Operator\nVFs · High-throughput"]
+                end
+
+            end
+
+        end
+    end
+
+    %% ── CONNECTIONS ────────────────────────────────────────────
+
+    USERS -->|"HTTPS :443"| LB
+    USERS -->|"oc / kubectl API"| LB
+    LB -->|"Ingress traffic"| ROUTER
+    LB -->|"API :6443"| M1 & M2 & M3
+
+    AD -->|"LDAP / LDAPs"| LDAP_IDP
+    GIT -->|"Webhook trigger"| TEKTON
+    GIT -->|"GitOps sync"| ARGO
+    DNS -->|"DNS resolution"| OCP
+
+    CP -->|"schedules pods"| INFRA
+    CP -->|"schedules pods"| WORKERS
+    ARGO -->|"deploy manifests"| WORKERS
+    TEKTON -->|"push image"| REG
+
+    NOOBAA -->|"S3 OBC backend"| REG
+    OSD1 & OSD2 & OSD3 --> NOOBAA
+    OSD1 & OSD2 & OSD3 --> SC
+    SC -->|"PVC provisioning"| WORKERS
+    SC -->|"PVC provisioning"| INFRA
+
+    OAUTH --- LDAP_IDP
+    CERTOP --- CERTS
+    ARGO --- TEKTON
+    SMCP --- KIALI
+    OVN --- MULTUS --- SRIOV
+
+    WORKERS -->|"mTLS sidecar"| SMCP
+    WORKERS -->|"multi-NIC"| MULTUS
+    WORKERS -->|"NIC passthrough"| SRIOV
+
+    %% ── STYLES ─────────────────────────────────────────────────
+
+    classDef external   fill:#f5f5f5,stroke:#999999,color:#333333
+    classDef master     fill:#1a2744,stroke:#0d1b3e,color:#ffffff
+    classDef infra      fill:#2c3e6b,stroke:#1a2744,color:#ffffff
+    classDef worker     fill:#344e41,stroke:#1f2f27,color:#ffffff
+    classDef storage    fill:#4a3f6b,stroke:#2e2645,color:#ffffff
+    classDef service    fill:#2e4057,stroke:#1a2744,color:#ffffff
+    classDef noobaa     fill:#5a4a7a,stroke:#3b2f5e,color:#ffffff
+    classDef sc         fill:#f0f0f0,stroke:#aaaaaa,color:#444444
+
+    class USERS,GIT,AD,LB,DNS external
+    class M1,M2,M3 master
+    class ROUTER,MON,LOG,REG infra
+    class W1,W2,WN worker
+    class OSD1,OSD2,OSD3 storage
+    class NOOBAA noobaa
+    class SC sc
+    class OAUTH,LDAP_IDP,CERTOP,CERTS,ARGO,TEKTON,SMCP,KIALI,OVN,MULTUS,SRIOV service
