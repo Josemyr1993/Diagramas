@@ -1,0 +1,404 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- TITLE -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="title" value="ocp-dev-v2 — OpenShift 4.18 on vSphere 8 — Architecture Overview" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1574" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- VSPHERE 8 OUTER CONTAINER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="vsphere" value="VMware vSphere 8 — Hypervisor Platform" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.cisco.sites.generic_building;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1F3864;strokeWidth=2;fontStyle=1;fontSize=13;fontColor=#1F3864;verticalAlign=top;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="70" width="1574" height="1050" as="geometry" />
+    </mxCell>
+
+    <!-- Override with simple rectangle for vSphere container -->
+    <mxCell id="vsphere2" value="🖥️  VMware vSphere 8 — Hypervisor Platform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#1F3864;strokeWidth=3;fontStyle=1;fontSize=14;fontColor=#1F3864;verticalAlign=top;align=center;arcSize=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="70" width="1574" height="1060" as="geometry" />
+    </mxCell>
+
+    <!-- vSphere labels -->
+    <mxCell id="vs_label" value="vCenter: [VCENTER_FQDN] | Datacenter: [DC_NAME] | Datastore: [DATASTORE]" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#555555;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="300" y="95" width="900" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- SHARED SERVICES ROW (top) -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- LDAP / AD -->
+    <mxCell id="ldap_box" value="🔐 LDAP / Active Directory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="70" y="130" width="200" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="ldap_detail" value="OAuth IdP | LDAP Sync CronJob&#xa;sAMAccountName | Group RBAC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="70" y="182" width="200" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Cert Manager -->
+    <mxCell id="cert_box" value="🔒 cert-manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="290" y="130" width="200" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="cert_detail" value="ClusterIssuer | API Cert | Wildcard&#xa;Registry Cert | Auto-Renewal" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="290" y="182" width="200" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- GitOps -->
+    <mxCell id="gitops_box" value="🔄 GitOps — ArgoCD + Tekton" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="510" y="130" width="220" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="gitops_detail" value="openshift-gitops ns | App-of-Apps&#xa;Tekton Pipelines | Git Webhook" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="510" y="182" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Monitoring -->
+    <mxCell id="mon_box" value="📊 Monitoring — Prometheus / Grafana" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="750" y="130" width="240" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="mon_detail" value="CMO | Alertmanager | Thanos Querier&#xa;PVC on ODF | Grafana Dashboards" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="750" y="182" width="240" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Logging -->
+    <mxCell id="log_box" value="📋 Logging — Loki / Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="130" width="230" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="log_detail" value="openshift-logging | Vector Collector&#xa;App + Infra + Audit logs | OBC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="182" width="230" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Service Mesh -->
+    <mxCell id="mesh_box" value="🕸️ Service Mesh — OSSM / Istio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="1260" y="130" width="230" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="mesh_detail" value="istio-system | mTLS STRICT&#xa;Kiali | Jaeger/Tempo Tracing" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#7D4D00;" vertex="1" parent="1">
+      <mxGeometry x="1260" y="182" width="230" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- DEV CLUSTER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="dev_cluster" value="🟢  ocp-dev-v2-dev  |  Development Cluster  |  OCP 4.18  |  UPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#1a7b1a;strokeWidth=3;fontStyle=1;fontSize=13;fontColor=#1a4a1a;verticalAlign=top;align=center;arcSize=2;" vertex="1" parent="1">
+      <mxGeometry x="60" y="235" width="480" height="390" as="geometry" />
+    </mxCell>
+
+    <!-- Dev Control Plane -->
+    <mxCell id="dev_cp" value="Control Plane (Masters x3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#1a7b1a;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="75" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_cp_d" value="8 vCPU | 32 GB RAM | 120 GB&#xa;etcd | API Server | Scheduler" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1a4a1a;" vertex="1" parent="1">
+      <mxGeometry x="75" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev Workers -->
+    <mxCell id="dev_wk" value="Worker / Compute Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#1a7b1a;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="295" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_wk_d" value="[N] vCPU | [N] GB RAM&#xa;Application Workloads" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1a4a1a;" vertex="1" parent="1">
+      <mxGeometry x="295" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev ODF -->
+    <mxCell id="dev_odf" value="🗄️ ODF Internal — Ceph" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="75" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_odf_d" value="3 Storage Nodes | Ceph RBD + CephFS&#xa;StorageCluster: ocs-storagecluster" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="75" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev NooBaa -->
+    <mxCell id="dev_noobaa" value="☁️ NooBaa MCG + OBC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="295" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_noobaa_d" value="image-registry-obc | S3 Endpoint&#xa;BackingStore: Ceph RBD PVC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="295" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev Registry -->
+    <mxCell id="dev_reg" value="📦 Image Registry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="75" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_reg_d" value="Storage: NooBaa OBC (S3)&#xa;openshift-image-registry ns" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="75" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev Networking -->
+    <mxCell id="dev_net" value="🌐 Networking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="295" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_net_d" value="OVN-Kubernetes | Multus CNI&#xa;SR-IOV | API VIP | Ingress VIP" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="295" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Dev Infra node -->
+    <mxCell id="dev_infra" value="Infra Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#1a7b1a;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="75" y="530" width="420" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="dev_infra_d" value="Router | Registry | Monitoring | Logging workloads tainted to infra nodes" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1a4a1a;" vertex="1" parent="1">
+      <mxGeometry x="75" y="566" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Dev DNS/LB -->
+    <mxCell id="dev_dns" value="DNS: api.dev.[domain] | *.apps.dev.[domain]   ·   LB: API :6443 | Ingress :80/:443" style="text;html=1;strokeColor=none;fillColor=#e8f5e9;align=center;fontSize=9;fontColor=#1a4a1a;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="75" y="592" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- STAGING CLUSTER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="stg_cluster" value="🟡  ocp-dev-v2-staging  |  Staging Cluster  |  OCP 4.18  |  UPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#c9a800;strokeWidth=3;fontStyle=1;fontSize=13;fontColor=#5c4800;verticalAlign=top;align=center;arcSize=2;" vertex="1" parent="1">
+      <mxGeometry x="587" y="235" width="480" height="390" as="geometry" />
+    </mxCell>
+
+    <!-- Staging Control Plane -->
+    <mxCell id="stg_cp" value="Control Plane (Masters x3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0c400;strokeColor=#c9a800;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#3d3000;" vertex="1" parent="1">
+      <mxGeometry x="602" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_cp_d" value="8 vCPU | 32 GB RAM | 120 GB&#xa;etcd | API Server | Scheduler" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#5c4800;" vertex="1" parent="1">
+      <mxGeometry x="602" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging Workers -->
+    <mxCell id="stg_wk" value="Worker / Compute Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0c400;strokeColor=#c9a800;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#3d3000;" vertex="1" parent="1">
+      <mxGeometry x="822" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_wk_d" value="[N] vCPU | [N] GB RAM&#xa;Application Workloads" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#5c4800;" vertex="1" parent="1">
+      <mxGeometry x="822" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging ODF -->
+    <mxCell id="stg_odf" value="🗄️ ODF Internal — Ceph" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="602" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_odf_d" value="3 Storage Nodes | Ceph RBD + CephFS&#xa;StorageCluster: ocs-storagecluster" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="602" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging NooBaa -->
+    <mxCell id="stg_noobaa" value="☁️ NooBaa MCG + OBC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="822" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_noobaa_d" value="image-registry-obc | S3 Endpoint&#xa;BackingStore: Ceph RBD PVC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="822" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging Registry -->
+    <mxCell id="stg_reg" value="📦 Image Registry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="602" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_reg_d" value="Storage: NooBaa OBC (S3)&#xa;openshift-image-registry ns" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="602" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging Networking -->
+    <mxCell id="stg_net" value="🌐 Networking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="822" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_net_d" value="OVN-Kubernetes | Multus CNI&#xa;SR-IOV | API VIP | Ingress VIP" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="822" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Staging infra -->
+    <mxCell id="stg_infra" value="Infra Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0c400;strokeColor=#c9a800;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#3d3000;" vertex="1" parent="1">
+      <mxGeometry x="602" y="530" width="420" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="stg_infra_d" value="Router | Registry | Monitoring | Logging workloads tainted to infra nodes" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#5c4800;" vertex="1" parent="1">
+      <mxGeometry x="602" y="566" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Staging DNS/LB -->
+    <mxCell id="stg_dns" value="DNS: api.staging.[domain] | *.apps.staging.[domain]   ·   LB: API :6443 | Ingress :80/:443" style="text;html=1;strokeColor=none;fillColor=#fffde7;align=center;fontSize=9;fontColor=#5c4800;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="602" y="592" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- PROD CLUSTER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="prd_cluster" value="🔴  ocp-dev-v2-prod  |  Production Cluster  |  OCP 4.18  |  UPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#CC0000;strokeWidth=3;fontStyle=1;fontSize=13;fontColor=#6d0000;verticalAlign=top;align=center;arcSize=2;" vertex="1" parent="1">
+      <mxGeometry x="1114" y="235" width="480" height="390" as="geometry" />
+    </mxCell>
+
+    <!-- Prod Control Plane -->
+    <mxCell id="prd_cp" value="Control Plane (Masters x3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9534f;strokeColor=#CC0000;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_cp_d" value="8 vCPU | 32 GB RAM | 120 GB&#xa;etcd | API Server | Scheduler" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#6d0000;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod Workers -->
+    <mxCell id="prd_wk" value="Worker / Compute Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9534f;strokeColor=#CC0000;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="275" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_wk_d" value="[N] vCPU | [N] GB RAM&#xa;Application Workloads" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#6d0000;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="316" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod ODF -->
+    <mxCell id="prd_odf" value="🗄️ ODF Internal — Ceph" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_odf_d" value="3 Storage Nodes | Ceph RBD + CephFS&#xa;StorageCluster: ocs-storagecluster" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod NooBaa -->
+    <mxCell id="prd_noobaa" value="☁️ NooBaa MCG + OBC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="360" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_noobaa_d" value="image-registry-obc | S3 Endpoint&#xa;BackingStore: Ceph RBD PVC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="402" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod Registry -->
+    <mxCell id="prd_reg" value="📦 Image Registry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_reg_d" value="Storage: NooBaa OBC (S3)&#xa;openshift-image-registry ns" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod Networking -->
+    <mxCell id="prd_net" value="🌐 Networking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="445" width="200" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_net_d" value="OVN-Kubernetes | Multus CNI&#xa;SR-IOV | API VIP | Ingress VIP" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1349" y="487" width="200" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Prod infra -->
+    <mxCell id="prd_infra" value="Infra Nodes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9534f;strokeColor=#CC0000;strokeWidth=1;fontStyle=1;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="530" width="420" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="prd_infra_d" value="Router | Registry | Monitoring | Logging workloads tainted to infra nodes" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#6d0000;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="566" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Prod DNS/LB -->
+    <mxCell id="prd_dns" value="DNS: api.prod.[domain] | *.apps.prod.[domain]   ·   LB: API :6443 | Ingress :80/:443" style="text;html=1;strokeColor=none;fillColor=#fce4ec;align=center;fontSize=9;fontColor=#6d0000;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="1129" y="592" width="420" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- STORAGECLASS LEGEND -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="sc_box" value="StorageClasses (ODF — all clusters)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#7D5700;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="60" y="650" width="1574" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="sc1" value="ocs-storagecluster-ceph-rbd&#xa;RWO | Block | Databases" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#d6a300;fontSize=9;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="80" y="680" width="220" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="sc2" value="ocs-storagecluster-cephfs&#xa;RWX/RWO | Shared FS | Logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#d6a300;fontSize=9;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="320" y="680" width="220" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="sc3" value="ocs-storagecluster-ceph-rgw&#xa;Bucket | S3 | Object Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#d6a300;fontSize=9;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="560" y="680" width="220" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="sc4" value="openshift-storage.noobaa.io&#xa;OBC | Multi-cloud Object (MCG)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#d6a300;fontSize=9;fontColor=#7D5700;" vertex="1" parent="1">
+      <mxGeometry x="800" y="680" width="220" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- NETWORKING DETAILS -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="net_box" value="Networking Details (per cluster)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#1F3864;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="1060" y="650" width="574" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="net1" value="OVN-Kubernetes&#xa;Primary CNI | NetworkPolicy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;fontSize=9;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1075" y="680" width="160" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="net2" value="Multus CNI&#xa;Multi-NIC | NADs | IPAM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;fontSize=9;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1250" y="680" width="160" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="net3" value="SR-IOV&#xa;VFs | High-throughput | NIC passthrough" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;fontSize=9;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="1425" y="680" width="190" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- PIPELINE FLOW -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="git_src" value="Git Repository&#xa;[Source of Truth]" style="shape=mxgraph.flowchart.stored_data;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="780" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="tekton" value="Tekton Pipeline&#xa;Build → Test → Push" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#4d2d6b;" vertex="1" parent="1">
+      <mxGeometry x="240" y="780" width="160" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="argocd" value="ArgoCD&#xa;Sync → Deploy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#4d2d6b;" vertex="1" parent="1">
+      <mxGeometry x="440" y="780" width="160" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- arrows: git → tekton → argocd → clusters -->
+    <mxCell id="arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#9673a6;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="git_src" target="tekton" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#9673a6;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="tekton" target="argocd" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#9673a6;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" source="argocd" target="dev_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#9673a6;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="argocd" target="stg_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#9673a6;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" source="argocd" target="prd_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- LDAP arrow to clusters -->
+    <mxCell id="arr_ldap_dev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6b656;strokeWidth=1;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ldap_box" target="dev_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_ldap_stg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6b656;strokeWidth=1;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ldap_box" target="stg_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_ldap_prd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6b656;strokeWidth=1;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ldap_box" target="prd_cluster" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ODF → Registry arrows (per cluster) -->
+    <mxCell id="arr_obc_dev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6a300;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="dev_noobaa" target="dev_reg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_obc_stg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6a300;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="stg_noobaa" target="stg_reg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_obc_prd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#d6a300;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="prd_noobaa" target="prd_reg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- LEGEND -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <mxCell id="legend_box" value="Legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#333333;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="680" y="770" width="950" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1" value="Shared Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="700" y="800" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2" value="ODF / Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a300;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="845" y="800" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3" value="Networking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#2E5FA3;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="990" y="800" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4" value="GitOps / Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1135" y="800" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5" value="Dev Cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#1a7b1a;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1280" y="800" width="100" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg6" value="Staging Cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#c9a800;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1393" y="800" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg7" value="Prod Cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#CC0000;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1516" y="800" width="100" height="30" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
